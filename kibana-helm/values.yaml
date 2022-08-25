@@ -1,0 +1,10 @@
+# modification for deployment manifest
+deployment:
+    name: kibana
+    replicas: 1
+    namesapace: efk
+Service:
+  name: kibana
+  type: NodePort
+  namespace: efk
+

@@ -1,0 +1,14 @@
+# Modify your values
+StatefulSet:
+   replicas: 1
+   env: 
+     clusterName: vinay-k8s  
+   name:  elasticsearch
+   namespace: efk
+   matchLabels: elasticsearch
+   VolumeClaimTemplate:
+            name: data
+            storageClassName: elastic-storage
+Service:
+      name: elasticsearch 
+

@@ -1,0 +1,19 @@
+# Modify yuor values 
+serviceaccount:
+  name: fluentd
+  namespace: efk
+clusterrole:
+  name: fluentd
+  resources: 
+    - pods
+    - namespaces
+  verbs:
+    - get
+    - watch
+    - list
+clusterrolebinding:
+   name: fluentd
+daemonset:
+   name: fluentd
+   namespace: efk
+    
